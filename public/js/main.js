@@ -22,12 +22,12 @@ $(function() {
                 data: JSON.stringify(data),
                 contentType: 'application/json',
                 async: false,
-                url: 'http://localhost:3000/users/login'
+                url: getName() + '/users/login'
             }).then(()=>{
 
             //Let User Log in
             console.log('Made it Here');
-            let url = 'http://localhost:3000/main';
+            let url = getName()+'/main';
             window.location = url;
 
         }).catch((error)=>{
@@ -59,9 +59,9 @@ $(function() {
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/users'
+            url: getName()+'/users'
         }).then(()=>{
-            let url = 'http://localhost:3000/main';
+            let url = getName() + '/main';
             window.location = url;
         }).catch((error)=>{
 
@@ -72,6 +72,15 @@ $(function() {
 
     })
     //*********************************************************************
+
+    function getName()
+    {
+        //Dev
+        // return 'http://localhost:3000'
+
+        //Prod
+        return 'https://task-manager-tetreault.herokuapp.com'
+    }
 
 //End of Document Ready Function
 });

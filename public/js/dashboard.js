@@ -40,7 +40,7 @@ $(function() {
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json',
-                url: 'http://localhost:3000/tasks'
+                url: getName() +'/tasks'
             }).then((result) => {
 
                 totalNumTask++;
@@ -94,7 +94,7 @@ $(function() {
                 type: 'GET',
                 // data: JSON.stringify(data),
                 contentType: 'application/json',
-                url: 'http://localhost:3000/tasks',
+                url: getName()+'/tasks',
                 success: function (results) {
 
                     if(results.length > 0)
@@ -149,9 +149,9 @@ $(function() {
 
     //Making table Slide in
     //************************************************************************
-    let left = $('#coolDiv').offset().left;
+    let left = $('#tableDiv').offset().left;
     left = left +1000;
-    $("#coolDiv").css({left:left}).animate({"left":"0px"}, 4000);
+    $("#tableDiv").css({left:left}).animate({"left":"0px"}, 4000);
     //************************************************************************
 
 
@@ -205,7 +205,7 @@ $(function() {
             type: 'DELETE',
             // data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/tasks/' + taskID,
+            url: getName()+'/tasks/' + taskID,
         }).then(() => {
 
             //Reset the table
@@ -231,13 +231,12 @@ $(function() {
 
         $.ajax({
             type: 'POST',
-            // data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/users/logout'
+            url: getName() +'/users/logout'
         }).then(()=>{
 
             console.log('User was Logged Out')
-            let url = 'http://localhost:3000';
+            let url = getName();
             window.location = url;
 
         }).catch((error)=>{
@@ -249,25 +248,14 @@ $(function() {
 
     //************************************************************************
 
+    function getName()
+    {
+        //Dev
+        // return 'http://localhost:3000'
+
+        //Prod
+        return 'https://task-manager-tetreault.herokuapp.com'
+    }
+
 //End of the Document Ready JQuery Function
 });
-
-
-//Extra
-
-/*
-
-        //To add a table row
-        $('#table tr:last').before('' +
-            '<tr>' +
-            '<th scope="row">2</th>' +
-            '<td>Will it work?</td>' +
-            '<td>' +
-            '<div class="form-check">\n' +
-            '<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">\n' +
-            '</div>' +
-            '</td>' +
-            '</tr>');
-
-
- */
