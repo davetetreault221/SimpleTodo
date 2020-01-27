@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc992c45-332f-404c-93a6-f08830c580f9" name="Default Changelist" comment="" />
+    <list default="true" id="fc992c45-332f-404c-93a6-f08830c580f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/greenPlus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/triangle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/mongoose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/taskRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/taskRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/main.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +41,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WcVJ2U5TG2UxGdr8EhGkoVeMSD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,14 +54,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.2.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views" />
     </key>
   </component>
@@ -56,21 +93,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579448794559</updated>
-      <workItem from="1579448795871" duration="61301000" />
+      <workItem from="1579448795871" duration="119461000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="-1123" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580150036399">
+      <screen x="-1600" y="23" width="1600" height="877" />
+    </state>
+    <state x="-1123" y="249" key="#com.intellij.fileTypes.FileTypeChooser/-1600.23.1600.877/0.23.1440.873@-1600.23.1600.877" timestamp="1580150036399" />
     <state x="220" y="27" key="SettingsEditor" timestamp="1579449145933">
       <screen x="0" y="23" width="1600" height="873" />
     </state>
     <state x="220" y="27" key="SettingsEditor/0.23.1600.873@0.23.1600.873" timestamp="1579449145933" />
-    <state x="518" y="220" width="670" height="676" key="search.everywhere.popup" timestamp="1579643075175">
-      <screen x="0" y="23" width="1600" height="873" />
+    <state x="-1082" y="221" width="670" height="680" key="search.everywhere.popup" timestamp="1580145356122">
+      <screen x="-1600" y="23" width="1600" height="877" />
     </state>
+    <state x="-1082" y="221" width="670" height="680" key="search.everywhere.popup/-1600.23.1600.877/0.23.1440.873@-1600.23.1600.877" timestamp="1580145356122" />
     <state x="518" y="220" width="670" height="676" key="search.everywhere.popup/0.23.1600.873@0.23.1600.873" timestamp="1579643075175" />
   </component>
 </project>

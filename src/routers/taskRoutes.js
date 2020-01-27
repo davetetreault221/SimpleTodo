@@ -6,21 +6,6 @@ const Task = require('../models/task');
 const auth = require('../middleware/auth');
 //***************************************
 
-
-//Testing
-//**********************************************************************
-
-router.get('', (req,res) => {
-    res.render('main', {
-        
-        message: 'Hello there!'}
-        );
-
-
-});
-//**********************************************************************
-
-
 //Handling a Get request for all Task
 //**********************************************************************
 router.get('/tasks', auth, async (req,res)=>{
@@ -92,7 +77,6 @@ router.post('/tasks', auth , async (req,res)=>{
     const aTask = new Task({
         ...req.body,
         owner: req.user._id
-
     }) ;
 
     aTask.save().then((result)=>{
@@ -191,5 +175,15 @@ router.patch('/tasks/:id', auth, async(req,res) =>{
 
 });
 //**********************************************************************
+
+//404 Page
+//**************************************************
+router.get('*', (req, res) => {
+
+    res.send('404 PAGE NOT FOUND')
+
+});
+//**************************************************
+
 
 module.exports = router;

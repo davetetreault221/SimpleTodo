@@ -40,13 +40,6 @@ router.patch('/users/me', auth, async (req, res) => {
 router.delete('/users/me', auth, async (req, res) => {
 
     try {
-
-        // const user = await User.findByIdAndDelete(req.user._id);
-        //
-        // if (!user) {
-        //     return res.status(404).send()
-        // }
-
         await req.user.remove();
 
         res.send(req.user)
@@ -65,10 +58,16 @@ router.post('/users',async(req,res)=>{
     //Refactor with Await
     const user = new User(req.body);
 
-
     try {
         await user.save();
         const token = await user.generateToken();
+
+        //Create the Cookie which stores the token for authorization
+        //*************************************************************
+
+        res.cookie('token', token) // options is optional
+
+        //*************************************************************
 
         res.status(201).send({user, token});
 
@@ -90,6 +89,12 @@ router.post('/users/logout', auth, async(req,res)=>{
         })
 
         await req.user.save();
+
+        //Remove The cookie token
+        //******************************
+        res.cookie('token', '') // Empty the Cookie Value
+        //******************************
+
 
         res.send();
 
@@ -123,6 +128,13 @@ router.post('/users/login',async(req,res)=>{
         //Using the the User Schema to call a function
         const user = await User.findByCredentials(req.body.email,req.body.password);
         const token = await user.generateToken();
+
+        //Create the Cookie which stores the token for authorization
+        //*************************************************************
+
+        res.cookie('token', token) // options is optional
+
+        //*************************************************************
 
         res.send({user, token});
 

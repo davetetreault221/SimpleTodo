@@ -1,0 +1,203 @@
+
+html,
+body {
+    height: 100%;
+}
+
+:root {
+    --triangleSizeBig: 100px;
+    --modalWidth: auto;
+    --logoutBtnMarg: -22px;
+}
+
+.firstTask {
+    bottom: -92px;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    background: cornsilk;
+}
+
+@media only screen and (max-width: 414px) {
+
+/*    Anything smaller then 414 goes in here */
+    :root {
+        /* scale for 1.33 */
+        --triangleSizeBig: 50px;
+        --logoutBtnMarg: -22px;
+        --modalWidth: 300px;
+    }
+
+    #myModal{
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .main-message {
+        text-align: center;
+    }
+
+    .add-button {
+        left: 80px
+    }
+
+    .firstTask{
+        bottom: -146px;
+        position: absolute;
+        text-align: center;
+        font-size: 17px;
+        width: 222px;
+        border-bottom: dashed;
+        border: dotted;
+        padding: 5px;
+        background: cornsilk;
+    }
+}
+
+.login-form {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px;
+     text-align: center;
+ }
+
+.main-message {
+
+    padding-top: 70px;
+    visibility: hidden;
+
+}
+
+.main-table {
+    padding-top: 50px;
+    border-left-style: dashed;
+    margin-top: 20px;
+    font-family: 'Work Sans', sans-serif;
+    visibility: hidden;
+
+}
+
+.login {
+    border: 0px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.login-button{
+    font-family: 'Muli', sans-serif;
+    background: royalblue;
+    border: royalblue;
+}
+
+textarea, input {
+    padding:10px;
+    font-family: FontAwesome, 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.tri-bottom-left {
+    background: no-repeat;
+    width: var(--triangleSizeBig);
+    height: var(--triangleSizeBig);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.tri-bottom-right {
+    background: no-repeat;
+    width: var(--triangleSizeBig);
+    height: var(--triangleSizeBig);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Safari 3-8 */
+    transform: rotate(270deg);
+}
+
+.tri-top-right {
+     background: no-repeat;
+     width: var(--triangleSizeBig);
+     height: var(--triangleSizeBig);
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     -ms-transform: rotate(180deg); /* IE 9 */
+     -webkit-transform: rotate(180deg); /* Safari 3-8 */
+     transform: rotate(180deg);
+ }
+
+.tri-top-left {
+    background: no-repeat;
+    width: var(--triangleSizeBig);
+    height: var(--triangleSizeBig);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+}
+
+.add-button {
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+}
+
+.add-task {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.delete-btn:hover {
+    background-color: #e55b46;
+    box-shadow: 0px 15px 20px rgba(255,101,80,0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.box hr{
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+}
+
+#demotext {
+    color: #444444;
+    background: #FFFFFF;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+    color: #444444;
+    background: #FFFFFF;
+}
+
+#logoutBtn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: var(--logoutBtnMarg);
+
+}
+
+.deleteTaskPara{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+}
+
+#myModal {
+    width: var(--modalWidth);
+}
+
+

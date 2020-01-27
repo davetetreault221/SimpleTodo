@@ -1,26 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Dave</title>
+    <title>Task Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
 </head>
+
 <body>
 
-    {{title}}
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="box col-9">
+            <h1 id="demotext" class="main-message">Welcome {{name}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-2 col-sm-3"></div>
+        <div id="coolDiv" class="main-table col-4 col-md-7">
+            <table id="table" class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Done?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success add-button ">Add Task +</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="container">
+                <div class="row">
+                    <h3 class="firstTask">Add your first task using the "Add Task" button!</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-5"></div>
+    </div>
+</div>
 
 
-    <script>
-        let myass = '{{title}}';
+    <div class="container">
 
-        if(myass)
-        {
-            console.log(myass)
-        }
-        else
-        {
-            console.log('There is nothing in there');
-        }
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add a Task</h4>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 0px;">
 
-    </script>
+                        <div class="form-group" >
+                            <label>Task Description</label>
+                            <input  class="form-control" id="newTask" placeholder="Enter Task">
+                            <small class="form-text text-muted add-task">Try to write as much detail to make sure to remember</small>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="addTask" type="button" class="btn btn-success" data-dismiss="modal">Add Task</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete a Task Modal-->
+    <div class="modal fade" id="deleteModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Are you sure?</h4>
+                </div>
+                <div class="modal-body" style="padding-bottom: 0px;">
+                    <p class="deleteTaskPara">You're about to delete a task, are you sure?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button id="deleteTask" type="button" class="btn btn-danger" data-dismiss="modal">Yes, Delete Task!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="taskIds"></div>
+
+    <button id="logoutBtn" type="button" class="btn btn-danger">Logout</button>
+
+
+    <img src="/img/triangle.png" class="tri-bottom-left">
+    <img src="/img/triangle.png" class="tri-bottom-right">
+    <img src="/img/triangle.png" class="tri-top-right">
+    <img src="/img/triangle.png" class="tri-top-left">
+
+    <script src="js/dashboard.js"></script>
+
 </body>
+
 </html>
