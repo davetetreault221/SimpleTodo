@@ -3,7 +3,7 @@ $(function() {
 
     //User Log In
     //*********************************************************************
-    $("#loginSub").on("click",function () {
+    $("#loginSub").on("click",async function () {
 
         console.log('The button to log in was pushed');
 
@@ -17,27 +17,31 @@ $(function() {
 
         //Ajax Request to Check if User Valid
         //*********************************************
-        $.ajax({
+        try
+        {
+            const result = await $.ajax({
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json',
                 async: false,
                 url: getName() + '/users/login'
-            }).then(()=>{
+            });
 
-            //Let User Log in
-            console.log('Made it Here');
+            //After the call if a success redirect
+            console.log(result);
             let url = getName()+'/main';
             window.location = url;
 
-        }).catch((error)=>{
-            alert("Invalid email/password!!");
-            console.log('There was an error');
-        });
-        //*********************************************
+        } catch (error)
+        {
+            console.log(error);
+            alert(error);
+        }
 
+        //*********************************************
     });
     //*********************************************************************
+
 
     //Create a User
     //*********************************************************************
@@ -76,8 +80,8 @@ $(function() {
     function getName()
     {
         //Dev
-        // return 'http://localhost:3000'
-
+        //  return 'http://localhost:3000'
+        //
         //Prod
         return 'https://task-manager-tetreault.herokuapp.com'
     }
