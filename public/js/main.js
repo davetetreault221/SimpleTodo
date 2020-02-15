@@ -59,18 +59,20 @@ $(function() {
 
         //Ajax Call to try and Create User
         //**********************************************
+
         $.ajax({
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
-            url: getName()+'/users'
+            url: getName()+'/users',
+            async: false
         }).then(()=>{
             let url = getName() + '/main';
             window.location = url;
         }).catch((error)=>{
 
             //Ajax Call was a failure
-            alert(error)
+            alert('There was an error creating the account')
         })
         //**********************************************
 
