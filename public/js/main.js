@@ -82,10 +82,10 @@ $(function() {
     function getName()
     {
         //Dev
-         return 'http://localhost:3000'
+        //  return 'http://localhost:3000'
         //
         //Prod
-        // return 'https://task-manager-tetreault.herokuapp.com'
+        return 'https://task-manager-tetreault.herokuapp.com'
     }
 
 //End of Document Ready Function
