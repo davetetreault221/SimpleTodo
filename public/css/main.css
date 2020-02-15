@@ -39,7 +39,8 @@ body {
     }
 
     .add-button {
-        left: 80px
+        left: 80px;
+        width: 100px;
     }
 
     .firstTask{
